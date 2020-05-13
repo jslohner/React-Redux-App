@@ -5,6 +5,7 @@ import { fetchCharacters } from '../../store/actions';
 import Character from './Character.js';
 
 function Characters({ fetchCharacters, isFetching, characterData }) {
+
 	useEffect(() => {
 		fetchCharacters();
 	}, []);

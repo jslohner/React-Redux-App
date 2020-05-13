@@ -31,3 +31,19 @@ export const fetchEpisodes = () => {
 			});
 	};
 };
+
+export const FETCH_LOCATIONS_START = 'FETCH_LOCATIONS_START';
+export const FETCH_LOCATIONS_SUCCESS = 'FETCH_LOCATIONS_SUCCESS';
+export const fetchLocations = () => {
+	return dispatch => {
+		dispatch({ type: FETCH_LOCATIONS_START });
+
+		axios.get('https://rickandmortyapi.com/api/location')
+			.then(res => {
+				dispatch({ type: FETCH_LOCATIONS_SUCCESS, payload: res.data.results })
+			})
+			.catch(err => {
+				console.log(err);
+			});
+	};
+};

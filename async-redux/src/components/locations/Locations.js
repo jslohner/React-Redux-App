@@ -1,26 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import axios from 'axios';
+import { fetchLocations } from '../../store/actions';
 
 import Location from './Location.js';
 
-function Locations() {
-	// useEffect(() => {
-	// 	axios.get('https://rickandmortyapi.com/api/location')
-	// 		.then(res => {
-	// 			console.log(res);
-	// 		})
-	// 		.catch(err => {
-	// 			console.log(err);
-	// 		});
-	// }, []);
+function Locations({ fetchLocations, isFetching, locationData }) {
+
+	useEffect(() => {
+		fetchLocations();
+	}, []);
 
 	return (
 		<div className='location-page'>
 			<h2>Locations</h2>
-			<Location />
+			{isFetching && <h3>Fetching Location Data...</h3>}
+			{!isFetching && locationData && (
+				locationData.map(location => {
+					return <Location key={location.id} location={location}/>
+				})
+			)}
 		</div>
 	);
 }
 
-export default Locations;
+const mapStateToProps = state => {
+	return {
+		isFetching: state.locations.isFetching,
+		locationData: state.locations.locationData
+	};
+};
+
+export default connect(mapStateToProps, { fetchLocations })(Locations);
