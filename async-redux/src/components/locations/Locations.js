@@ -16,7 +16,7 @@ function Locations() {
 	// }, []);
 
 	return (
-		<div>
+		<div className='location-page'>
 			<h2>Locations</h2>
 			<Location />
 		</div>

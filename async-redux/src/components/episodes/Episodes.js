@@ -16,7 +16,7 @@ function Episodes() {
 	// }, []);
 
 	return (
-		<div>
+		<div className='episode-page'>
 			<h2>Episodes</h2>
 			<Episode />
 		</div>
