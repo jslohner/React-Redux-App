@@ -1,26 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import axios from 'axios';
+import { fetchEpisodes } from '../../store/actions';
 
 import Episode from './Episode.js';
 
-function Episodes() {
-	// useEffect(() => {
-	// 	axios.get('https://rickandmortyapi.com/api/episode')
-	// 		.then(res => {
-	// 			console.log(res);
-	// 		})
-	// 		.catch(err => {
-	// 			console.log(err);
-	// 		});
-	// }, []);
+function Episodes({ fetchEpisodes, isFetching, episodeData }) {
+
+	useEffect(() => {
+		fetchEpisodes();
+	}, []);
 
 	return (
 		<div className='episode-page'>
 			<h2>Episodes</h2>
-			<Episode />
+			{isFetching && <h3>Fetching Episode Data...</h3>}
+			{!isFetching && episodeData && (
+				episodeData.map(episode => {
+					return <Episode key={episode.id} episode={episode}/>
+				})
+			)}
 		</div>
 	);
 }
 
-export default Episodes;
+const mapStateToProps = state => {
+	return {
+		isFetching: state.episodes.isFetching,
+		episodeData: state.episodes.episodeData
+	};
+};
+
+export default connect(mapStateToProps, { fetchEpisodes })(Episodes);

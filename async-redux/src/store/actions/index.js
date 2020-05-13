@@ -15,3 +15,19 @@ export const fetchCharacters = () => {
 			});
 	};
 };
+
+export const FETCH_EPISODES_START = 'FETCH_EPISODES_START';
+export const FETCH_EPISODES_SUCCESS = 'FETCH_EPISODES_SUCCESS';
+export const fetchEpisodes = () => {
+	return dispatch => {
+		dispatch({ type: FETCH_EPISODES_START });
+
+		axios.get('https://rickandmortyapi.com/api/episode')
+			.then(res => {
+				dispatch({ type: FETCH_EPISODES_SUCCESS, payload: res.data.results })
+			})
+			.catch(err => {
+				console.log(err);
+			});
+	};
+};

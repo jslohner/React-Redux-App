@@ -16,16 +16,16 @@ function App() {
 					<Home />
 				</Route>
 
-				<Route>
-					<Characters path='/characters'/>
+				<Route path='/characters'>
+					<Characters />
 				</Route>
 
-				<Route>
-					<Episodes path='/episodes'/>
+				<Route path='/episodes'>
+					<Episodes />
 				</Route>
 
-				<Route>
-					<Locations path='/locations'/>
+				<Route path='/locations'>
+					<Locations />
 				</Route>
 			</Switch>
 		</div>
