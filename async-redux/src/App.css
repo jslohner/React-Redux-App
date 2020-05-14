@@ -1,38 +1,75 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	width: 100%;
+	border: 3px solid white;
+	background-color: black
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.5rem;
+	margin: 5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar a:hover {
+	color: crimson;
 }
 
-.App-link {
-  color: #61dafb;
+.home-page {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-page h1 {
+	width: 100%;
+	font-size: 4rem;
+	margin-bottom: 20%;
+}
+
+.home-page .page-links {
+	width: 60%;
+	border: 3px solid white;
+	background-color: black;
+	padding: 5%;
+}
+
+.home-page .page-links a {
+	color: white;
+	font-size: 1.5rem;
+	margin: 5%;
+	text-decoration: none;
+}
+
+.home-page .page-links a:hover {
+	color: crimson;
+}
+
+.character-page {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.character-page h2 {
+	width: 100%;
+	font-size: 4rem;
+}
+
+.character-page .character {
+	border: 2px solid black;
+	margin: 2%;
+	background-color: crimson;
+}
+
+.character-page .character img {
+	border: 2px solid black;
+	width: 80%;
 }

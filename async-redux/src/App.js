@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import './App.css';
 
 import Home from './components/Home.js';
+import NavBar from './components/NavBar.js';
 import Characters from './components/characters/Characters.js';
 import Episodes from './components/episodes/Episodes.js';
 import Locations from './components/locations/Locations.js';
@@ -11,6 +12,10 @@ import Locations from './components/locations/Locations.js';
 function App() {
 	return (
 		<div className='App'>
+			<Route path='/'>
+				<NavBar />
+			</Route>
+
 			<Switch>
 				<Route exact path='/'>
 					<Home />
