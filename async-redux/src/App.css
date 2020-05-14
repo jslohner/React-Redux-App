@@ -73,3 +73,41 @@
 	border: 2px solid black;
 	width: 80%;
 }
+
+.episode-page {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.episode-page h2 {
+	width: 100%;
+	font-size: 4rem;
+}
+
+.episode-page .episode {
+	border: 2px solid black;
+	margin: 2%;
+	background-color: crimson;
+	padding: 2%;
+	width: 20%;
+}
+
+.location-page {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.location-page h2 {
+	width: 100%;
+	font-size: 4rem;
+}
+
+.location-page .location {
+	border: 2px solid black;
+	margin: 2%;
+	background-color: crimson;
+	padding: 2%;
+	width: 20%;
+}

@@ -1,11 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Home from './Home.js';
-import Characters from './characters/Characters.js';
-import Episodes from './episodes/Episodes.js';
-import Locations from './locations/Locations.js';
-
 function NavBar() {
 	return (
 		<nav className='navbar'>
