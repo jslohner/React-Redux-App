@@ -1,0 +1,113 @@
+.App {
+	text-align: center;
+}
+
+.navbar {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	width: 100%;
+	border: 3px solid white;
+	background-color: black
+}
+
+.navbar a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.5rem;
+	margin: 5%;
+}
+
+.navbar a:hover {
+	color: crimson;
+}
+
+.home-page {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.home-page h1 {
+	width: 100%;
+	font-size: 4rem;
+	margin-bottom: 20%;
+}
+
+.home-page .page-links {
+	width: 60%;
+	border: 3px solid white;
+	background-color: black;
+	padding: 5%;
+}
+
+.home-page .page-links a {
+	color: white;
+	font-size: 1.5rem;
+	margin: 5%;
+	text-decoration: none;
+}
+
+.home-page .page-links a:hover {
+	color: crimson;
+}
+
+.character-page {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.character-page h2 {
+	width: 100%;
+	font-size: 4rem;
+}
+
+.character-page .character {
+	border: 2px solid black;
+	margin: 2%;
+	background-color: crimson;
+}
+
+.character-page .character img {
+	border: 2px solid black;
+	width: 80%;
+}
+
+.episode-page {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.episode-page h2 {
+	width: 100%;
+	font-size: 4rem;
+}
+
+.episode-page .episode {
+	border: 2px solid black;
+	margin: 2%;
+	background-color: crimson;
+	padding: 2%;
+	width: 20%;
+}
+
+.location-page {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.location-page h2 {
+	width: 100%;
+	font-size: 4rem;
+}
+
+.location-page .location {
+	border: 2px solid black;
+	margin: 2%;
+	background-color: crimson;
+	padding: 2%;
+	width: 20%;
+}
